@@ -1,16 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
+/* Add NavLink to import */
+import { BrowserRouter } from "react-router-dom";
+import App from "./components/App";
 
-function Home() {
-  return (
-    <div>
-      <h1>Home!</h1>
-    </div>
-  );
-}
+/* Add basic styling for NavLinks */
+const linkStyles = {
+  display: "inline-block",
+  width: "50px",
+  padding: "12px",
+  margin: "0 6px 6px",
+  background: "blue",
+  textDecoration: "none",
+  color: "white",
+};
 
-function App() {
-  return <Home />;
-}
+/* define the NavBar component */
 
-ReactDOM.render(<App />, document.getElementById("root"));
+
+
+/* add the NavBar component to our render method */
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
+);
